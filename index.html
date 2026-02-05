@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Dadan Ramdan Hidayat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            secondary: '#1e293b',
+            accent: '#3b82f6',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body
+  class="bg-gradient-to-br from-primary via-slate-900 to-indigo-950 text-gray-200 min-h-screen transition-colors duration-500">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-primary/80 backdrop-blur-md z-50 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">Dadan
+        Ramdan Hidayat</h1>
+      <div class="flex items-center space-x-8">
+        <ul class="hidden md:flex space-x-8">
+          <li><a href="#home" class="hover:text-accent transition">Home</a></li>
+          <li><a href="#about" class="hover:text-accent transition">About</a></li>
+          <li><a href="#skills" class="hover:text-accent transition">Skills</a></li>
+          <li><a href="#projects" class="hover:text-accent transition">Projects</a></li>
+          <li><a href="#certificates" class="hover:text-accent transition">Certificates</a></li>
+          <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+        </ul>
+        <!-- Dark Mode Toggle -->
+        <button id="theme-toggle" class="text-2xl focus:outline-none">
+          <i id="theme-toggle-dark" class="fas fa-moon hidden"></i>
+          <i id="theme-toggle-light" class="fas fa-sun"></i>
+        </button>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary/95">
+      <ul class="flex flex-col space-y-4 px-6 py-4">
+        <li><a href="#home" class="hover:text-accent transition">Home</a></li>
+        <li><a href="#about" class="hover:text-accent transition">About</a></li>
+        <li><a href="#skills" class="hover:text-accent transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-accent transition">Projects</a></li>
+        <li><a href="#certificates" class="hover:text-accent transition">Certificates</a></li>
+        <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden"
+    data-aos="fade-down">
+    <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/30 via-transparent to-indigo-900/30"></div>
+    <div class="text-center z-10 px-6">
+      <h1
+        class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">
+        Hi, I'm Dadan Ramdan Hidayat
+      </h1>
+      <p class="text-xl md:text-3xl mb-8 text-gray-300">Data Scientist & Web Development</p>
+      <div class="space-x-4">
+        <a href="#projects"
+          class="px-8 py-4 bg-accent text-white rounded-full hover:bg-blue-600 transition shadow-lg">View Projects</a>
+        <a href="#contact"
+          class="px-8 py-4 border border-accent text-accent rounded-full hover:bg-accent/20 transition">Contact Me</a>
+      </div>
+    </div>
+    <div class="absolute bottom-10 animate-bounce">
+      <i class="fas fa-chevron-down text-4xl text-gray-400"></i>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 max-w-7xl mx-auto" data-aos="fade-up">
+    <h2
+      class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+      About Me</h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1 flex justify-center" data-aos="fade-right" data-aos-delay="200">
+        <img src="ddn.jpeg" alt="Dadan Ramdan Hidayat"
+          class="rounded-2xl shadow-2xl border-4 border-accent/30 w-full max-w-xs md:max-w-sm object-cover aspect-[3/4]">
+      </div>
+      <div class="order-1 md:order-2 space-y-6" data-aos="fade-left" data-aos-delay="200">
+        <p class="text-lg leading-relaxed">
+          I am a data scientist and data-driven web developer with a strong interest in transforming data into
+          actionable insights through analysis, visualization, and interactive applications.
+          My work focuses on combining statistical analysis, machine learning, and web technologies
+          to support decision-making in academic and business contexts.
+        </p>
+        <p class="text-lg leading-relaxed">
+          I have experience working with survey data, exploratory data analysis, clustering, regression,
+          and predictive modeling, as well as building web-based dashboards and applications that present
+          data in a clear and user-friendly way. I enjoy bridging the gap between data and real-world
+          implementation through practical, end-to-end solutions.
+        </p>
+        <div class="flex space-x-6 text-3xl">
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="hover:text-accent transition"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-6 bg-secondary/50" data-aos="fade-up">
+    <h2
+      class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+      Skills & Expertise
+    </h2>
+
+    <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+
+      <!-- Data Science -->
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fas fa-chart-line text-5xl text-green-400 mb-4"></i>
+        <p class="font-semibold">Data Analysis</p>
+      </div>
+
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fas fa-brain text-5xl text-pink-400 mb-4"></i>
+        <p class="font-semibold">Machine Learning</p>
+      </div>
+
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fab fa-python text-5xl text-yellow-400 mb-4"></i>
+        <p class="font-semibold">Python</p>
+      </div>
+
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fas fa-database text-5xl text-blue-400 mb-4"></i>
+        <p class="font-semibold">SQL & Data Wrangling</p>
+      </div>
+
+      <!-- Visualization -->
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fas fa-chart-pie text-5xl text-purple-400 mb-4"></i>
+        <p class="font-semibold">Data Visualization</p>
+      </div>
+
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fas fa-tachometer-alt text-5xl text-indigo-400 mb-4"></i>
+        <p class="font-semibold">Dashboards (Shiny / Flex)</p>
+      </div>
+
+      <!-- Web -->
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fab fa-js-square text-5xl text-yellow-500 mb-4"></i>
+        <p class="font-semibold">JavaScript</p>
+      </div>
+
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fab fa-html5 text-5xl text-orange-500 mb-4"></i>
+        <p class="font-semibold">HTML & CSS</p>
+      </div>
+
+      <!-- Tools -->
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fab fa-git-alt text-5xl text-red-500 mb-4"></i>
+        <p class="font-semibold">Git & GitHub</p>
+      </div>
+
+      <div
+        class="text-center p-6 bg-gradient-to-br from-blue-800/30 to-indigo-900/30 rounded-xl border border-accent/20 hover:scale-105 transition">
+        <i class="fas fa-server text-5xl text-teal-400 mb-4"></i>
+        <p class="font-semibold">Data-Driven Web Apps</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 max-w-7xl mx-auto" data-aos="fade-up">
+    <h2
+      class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+      Featured Projects
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-10">
+
+      <!-- Project 1 -->
+      <div
+        class="bg-secondary/60 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition border border-slate-700">
+        <img src="img/img1.jpg" alt="E-Commerce Sales Analysis" class="w-full h-64 object-cover">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-4">E-Commerce Sales Analysis & Strategy</h3>
+          <p class="mb-6">
+            Six-month e-commerce sales data analysis to identify trends, top products,
+            and data-driven strategies for improving business performance.
+          </p>
+          <a href="https://rpubs.com/Ramdan/1324993" target="_blank"
+            class="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-600 transition">
+            View Report
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div
+        class="bg-secondary/60 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition border border-slate-700">
+        <img src="img/img2.jpg" alt="STR Business Plan Jakarta" class="w-full h-64 object-cover">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-4">STR Business Plan Analysis (Jakarta)</h3>
+          <p class="mb-6">
+            Data-driven business plan for short-term rental apartments in Jakarta,
+            covering market analysis, pricing strategy, and financial projections.
+          </p>
+          <a href="https://rpubs.com/Ramdan/1306200" target="_blank"
+            class="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-600 transition">
+            View Report
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div
+        class="bg-secondary/60 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition border border-slate-700">
+        <img src="img/img3.jpg" alt="Amazon Prime Titles Analysis" class="w-full h-64 object-cover">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-4">Amazon Prime Titles Data Analysis</h3>
+          <p class="mb-6">
+            Exploratory data analysis of Amazon Prime titles to examine content
+            distribution by category, release year, and country of origin.
+          </p>
+          <a href="https://rpubs.com/Ramdan/1311326" target="_blank"
+            class="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-600 transition">
+            View Report
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div
+        class="bg-secondary/60 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition border border-slate-700">
+        <img src="img/img4.jpg" alt="Survey Data Dashboard" class="w-full h-64 object-cover">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-4">Survey Data Analysis Dashboard</h3>
+          <p class="mb-6">
+            Interactive dashboard built with Shiny and Flexdashboard
+            for survey data analysis and visualization.
+          </p>
+          <a href="https://rpubs.com/Ramdan/1322294" target="_blank"
+            class="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-600 transition">
+            View Report
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div
+        class="bg-secondary/60 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition border border-slate-700">
+        <img src="img/img5.jpg" alt="Customer Satisfaction Survey App" class="w-full h-64 object-cover">
+        <div class="p-8">
+          <h3 class="text-2xl font-bold mb-4">Online Customer Satisfaction Survey App</h3>
+          <p class="mb-6">
+            Web-based survey dashboard to analyze customer satisfaction
+            and shopping behavior using interactive visual analytics.
+          </p>
+          <a href="https://dadanramdan.shinyapps.io/Dashboard/" target="_blank"
+            class="px-6 py-3 bg-accent text-white rounded-lg hover:bg-blue-600 transition">
+            Live Dashboard
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="py-20 px-6 bg-secondary/50" data-aos="fade-up">
+    <h2
+      class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+      Certificates
+    </h2>
+
+    <!-- GRID WRAPPER (SEMUA CERTIFICATE DI DALAM INI) -->
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Certifikat 1 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300"
+        data-aos="flip-left" data-aos-delay="100">
+        <img src="kaggle-ml.png" alt="Intro to Machine Learning - Kaggle"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-certificate text-accent text-3xl mr-3"></i>
+            <h3 class="text-xl font-bold">Intro to Machine Learning - Kaggle</h3>
+          </div>
+          <p class="text-gray-300 mb-2">Kaggle</p>
+          <p class="text-sm text-gray-400">Issued: October 2025</p>
+          <a href="#" class="mt-6 inline-block px-6 py-2 bg-accent/80 text-white rounded-lg hover:bg-accent transition">
+            View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certifikat 2 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300"
+        data-aos="flip-left" data-aos-delay="200">
+        <img src="kaggle-python.png" alt="Python - Kaggle"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-certificate text-accent text-3xl mr-3"></i>
+            <h3 class="text-xl font-bold">Python - Kaggle</h3>
+          </div>
+          <p class="text-gray-300 mb-2">Kaggle</p>
+          <p class="text-sm text-gray-400">Issued: October 2025</p>
+          <a href="#" class="mt-6 inline-block px-6 py-2 bg-accent/80 text-white rounded-lg hover:bg-accent transition">
+            View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certifikat 3 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300"
+        data-aos="flip-left" data-aos-delay="300">
+        <img src="kaggle-pandas.png" alt="Pandas - Kaggle"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-certificate text-accent text-3xl mr-3"></i>
+            <h3 class="text-xl font-bold">Pandas - Kaggle</h3>
+          </div>
+          <p class="text-gray-300 mb-2">Kaggle</p>
+          <p class="text-sm text-gray-400">Issued: October 2025</p>
+          <a href="#" class="mt-6 inline-block px-6 py-2 bg-accent/80 text-white rounded-lg hover:bg-accent transition">
+            View Certificate
+          </a>
+        </div>
+      </div>
+
+      <!-- Certifikat 4 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="kaggle-sql.png" alt="SQL - Kaggle"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">SQL - Kaggle</h3>
+          <p class="text-gray-300 mb-2">Kaggle</p>
+          <p class="text-sm text-gray-400">Issued: October 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 5 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="RevoU Data Analys.jpeg" alt="Intro to Data Analytics - RevoU"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Intro to Data Analytics - RevoU</h3>
+          <p class="text-gray-300 mb-2">RevoU</p>
+          <p class="text-sm text-gray-400">Issued: May 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 6 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="SECC_RevoU.jpg" alt="Software Engineering - RevoU"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Software Engineering - RevoU</h3>
+          <p class="text-gray-300 mb-2">RevoU</p>
+          <p class="text-sm text-gray-400">Issued: July 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 7 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="DQLab Data Science.jpeg" alt="Intro to Data Science with R - DQLab"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Intro to Data Science with R - DQLab</h3>
+          <p class="text-gray-300 mb-2">DQLab</p>
+          <p class="text-sm text-gray-400">Issued: June 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 8 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="DQLab Data Analys.jpeg" alt="Intro to Data Analysis with Excel - DQLab"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Intro to Data Analysis with Excel - DQLab</h3>
+          <p class="text-gray-300 mb-2">DQLab</p>
+          <p class="text-sm text-gray-400">Issued: June 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 9 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="samsung-innovation-campus.jpg" alt="Samsung Innovation Study Python"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Samsung Innovation Study Python</h3>
+          <p class="text-gray-300 mb-2">Samsung</p>
+          <p class="text-sm text-gray-400">Issued: October 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 10 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="IBMDesignDadan.jpg" alt="Data Classification and Summarization - IBM"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Data Classification and Summarization - IBM</h3>
+          <p class="text-gray-300 mb-2">IBM</p>
+          <p class="text-sm text-gray-400">Issued: August 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 11 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="Certificate SCADS.jpg" alt="Study SQL - SCADS"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Study SQL - SCADS</h3>
+          <p class="text-gray-300 mb-2">SCADS</p>
+          <p class="text-sm text-gray-400">Issued: July 2025</p>
+        </div>
+      </div>
+
+      <!-- Certifikat 12 -->
+      <div
+        class="group relative bg-gradient-to-br from-primary to-secondary/80 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:scale-105 transition-transform duration-300">
+        <img src="Dadan Ramdan Hidayat_CodingStudio.jpg" alt="Belajar Coding - Coding Studio"
+          class="w-full h-64 object-cover opacity-90 group-hover:opacity-100 transition">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+        <div class="relative p-8">
+          <h3 class="text-xl font-bold mb-2">Belajar Coding - Coding Studio</h3>
+          <p class="text-gray-300 mb-2">Coding Studio</p>
+          <p class="text-sm text-gray-400">Issued: July 2025</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-secondary/50" data-aos="fade-up">
+    <h2
+      class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+      Get In Touch
+    </h2>
+
+    <!-- Contact Cards -->
+    <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6281617019868" target="_blank"
+        class="group bg-primary/60 p-8 rounded-2xl border border-slate-700 text-center hover:scale-105 transition">
+        <i class="fab fa-whatsapp text-5xl text-green-500 mb-4"></i>
+        <h3 class="text-xl font-bold">WhatsApp</h3>
+        <p class="text-gray-400 mt-2">+62 816-1701-9868</p>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/dadanramdann_" target="_blank"
+        class="group bg-primary/60 p-8 rounded-2xl border border-slate-700 text-center hover:scale-105 transition">
+        <i class="fab fa-instagram text-5xl text-pink-500 mb-4"></i>
+        <h3 class="text-xl font-bold">Instagram</h3>
+        <p class="text-gray-400 mt-2">@dadanramdann_</p>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:hidayatramdan808@gmail.com"
+        class="group bg-primary/60 p-8 rounded-2xl border border-slate-700 text-center hover:scale-105 transition">
+        <i class="fas fa-envelope text-5xl text-blue-400 mb-4"></i>
+        <h3 class="text-xl font-bold">Email</h3>
+        <p class="text-gray-400 mt-2 break-all">hidayatramdan808@gmail.com</p>
+      </a>
+
+    </div>
+
+    <!-- Contact Form (Auto Email) -->
+    <div class="max-w-3xl mx-auto">
+      <form action="mailto:hidayatramdan808@gmail.com" method="POST" enctype="text/plain"
+        class="space-y-6 bg-primary/60 p-10 rounded-2xl border border-slate-700">
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <input type="text" name="Name" placeholder="Your Name" required
+            class="px-6 py-4 bg-secondary/70 border border-slate-600 rounded-lg focus:outline-none focus:border-accent">
+
+          <input type="email" name="Email" placeholder="Your Email" required
+            class="px-6 py-4 bg-secondary/70 border border-slate-600 rounded-lg focus:outline-none focus:border-accent">
+        </div>
+
+        <textarea name="Message" placeholder="Your Message" rows="6" required
+          class="w-full px-6 py-4 bg-secondary/70 border border-slate-600 rounded-lg focus:outline-none focus:border-accent"></textarea>
+
+        <div class="text-center">
+          <button type="submit"
+            class="px-10 py-4 bg-accent text-white rounded-full hover:bg-blue-600 transition shadow-lg">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center border-t border-slate-800">
+    <p>&copy; 2025 Dadan Ramdan Hidayat. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- AOS Initialization -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+  </script>
+
+  <!-- Dark Mode Toggle -->
+  <script>
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDark = document.getElementById('theme-toggle-dark');
+    const themeToggleLight = document.getElementById('theme-toggle-light');
+
+    if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      themeToggleDark.classList.remove('hidden');
+      themeToggleLight.classList.add('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      if (document.documentElement.classList.contains('dark')) {
+        localStorage.setItem('theme', 'dark');
+        themeToggleDark.classList.remove('hidden');
+        themeToggleLight.classList.add('hidden');
+      } else {
+        localStorage.setItem('theme', 'light');
+        themeToggleDark.classList.add('hidden');
+        themeToggleLight.classList.remove('hidden');
+      }
+    });
+  </script>
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+
+</html>
