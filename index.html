@@ -43,6 +43,14 @@
             display: none;
         }
 
+
+        /* Navbar: link aktif */
+        header nav a.nav-link.is-active {
+            background-color: #1b1c1e !important;
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
         /* Marquee teks DATA SCIENTIST */
         @keyframes marquee {
             from { transform: translateX(0); }
@@ -116,18 +124,12 @@
                         SYSTEMS</span></div>
             </div>
             <nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-xs py-space-xs rounded-full"
-                data-active-classes="bg-primary-container text-on-primary font-bold rounded-full"><a aria-current="page"
-                    class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary font-bold rounded-full"
-                    data-path="overview" href="#">About</a><a
-                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-                    data-path="projects" href="#projects">Projects</a><a
-                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-                    data-path="skills" href="#skills">Skills</a><a
-                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-                    data-path="experience" href="#experience">Experience</a><a
-                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
-                    data-path="certificates" href="#certificates">Certificates</a><a
-                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                data-active-classes="bg-primary-container text-on-primary font-bold rounded-full"><a class="nav-link px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="overview" href="#about">About</a><a class="nav-link px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="projects" href="#projects">Projects</a><a class="nav-link px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="skills" href="#skills">Skills</a><a class="nav-link px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="experience" href="#experience">Experience</a><a class="nav-link px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="certificates" href="#certificates">Certificates</a><a class="nav-link px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
                     data-path="contact" href="#contact">Contact</a></nav>
             <div class="flex items-center gap-space-sm"><a
                     class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-sm rounded-full font-label-lg text-label-lg uppercase tracking-wider text-primary border border-outline-variant hover:border-primary hover:bg-primary hover:text-on-primary transition-all duration-200"
@@ -141,7 +143,7 @@
         <div class="flex flex-col w-full">
 
             <!-- 1. HERO SECTION (tinggi = 1 layar desktop) -->
-            <section
+            <section id="home"
                 class="relative w-full h-screen max-h-[1000px] bg-surface-container-highest overflow-hidden select-none">
 
                 <!-- Garis grid -->
@@ -1219,6 +1221,52 @@
                     class="text-secondary">DESIGNED &amp; BUILT WITH PURPOSE</span></div>
         </div>
     </footer>
+
+    <script>
+        // Navbar aktif mengikuti section yang sedang dilihat
+        (function () {
+            const links = [...document.querySelectorAll('header nav a[href^="#"]')];
+            if (!links.length) return;
+            // urutan section; hero (#home) dianggap bagian dari About
+            const order = ['home', 'about', 'projects', 'skills', 'experience', 'certificates', 'contact']
+                .map(id => document.getElementById(id)).filter(Boolean);
+            const linkFor = id => links.find(a => a.getAttribute('href') === '#' + (id === 'home' ? 'about' : id));
+
+            let current = null;
+            function setActive(id) {
+                if (id === current) return;
+                current = id;
+                const target = linkFor(id);
+                links.forEach(a => {
+                    const on = a === target;
+                    a.classList.toggle('is-active', on);
+                    if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+                });
+            }
+
+            function update() {
+                const line = window.innerHeight * 0.35;
+                let id = order[0].id;
+                for (const sec of order) {
+                    if (sec.getBoundingClientRect().top <= line) id = sec.id;
+                }
+                // paling bawah halaman -> section terakhir
+                if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+                    id = order[order.length - 1].id;
+                }
+                setActive(id);
+            }
+
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => { update(); ticking = false; });
+            }, { passive: true });
+            window.addEventListener('resize', update);
+            update();
+        })();
+    </script>
 </body>
 
 </html>
