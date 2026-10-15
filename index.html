@@ -62,6 +62,38 @@
         @media (prefers-reduced-motion: reduce) {
             .marquee-track { animation: none; }
         }
+
+        /* Sertifikat: grid 3 kolom, scroll otomatis ke bawah */
+        @keyframes cert-up {
+            from { transform: translateY(0); }
+            to   { transform: translateY(-50%); }
+        }
+        .cert-window {
+            height: 540px;
+            overflow: hidden;
+            padding: 0.5rem 0.25rem 0;
+            -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 36px, #000 calc(100% - 36px), transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0, #000 36px, #000 calc(100% - 36px), transparent 100%);
+        }
+        .cert-track {
+            display: flex;
+            flex-direction: column;
+            animation: cert-up var(--cert-dur, 60s) linear infinite;
+            will-change: transform;
+        }
+        .cert-window:hover .cert-track { animation-play-state: paused; }
+        .cert-set {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            column-gap: 1rem;
+        }
+        .cert-set > .cert-card { margin-bottom: 1rem; }
+        @media (min-width: 768px) { .cert-set { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (min-width: 1024px) { .cert-set { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+        @media (prefers-reduced-motion: reduce) {
+            .cert-track { animation: none; }
+            .cert-window { overflow-y: auto; }
+        }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script
@@ -79,7 +111,7 @@
                     DR</div>
                 <div class="flex flex-col"><span
                         class="font-label-lg text-label-lg font-bold tracking-wider text-on-surface uppercase">DADAN
-                        RAMDAN HIDAYAT</span><span
+                        RAMDAN Hidayat</span><span
                         class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">DATA • ML •
                         SYSTEMS</span></div>
             </div>
@@ -786,9 +818,10 @@
                         <button data-filter="Nasional" class="cert-filter px-space-md py-space-xs rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors">Nasional (12)</button>
                         <button data-filter="Internasional" class="cert-filter px-space-md py-space-xs rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors">Internasional (7)</button>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="cert-grid">
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                    <div class="cert-window" id="cert-window">
+                        <div class="cert-track" id="cert-track">
+                            <div class="cert-set" id="cert-set">
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1Pqu6exOa9a-8ueoo3J-stfGesvrr2wQ_?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -800,8 +833,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -813,8 +845,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -826,8 +857,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -839,8 +869,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -852,8 +881,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -865,8 +893,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -878,8 +905,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -891,8 +917,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -904,8 +929,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -917,8 +941,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -930,8 +953,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/19qz7joDiB8JZHZbV0aV5rpYkdsuI-Ebt/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -943,8 +965,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/16nozDf9kyvoTE4uMPT1n1l8o6q31rMFg/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -956,8 +977,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/1slPIkA4lsOtRRS-QV8u69LmF4wI_MMMJ/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -969,8 +989,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/1RjXsf5T9UA8UsZ6auKS-v31qKICFGEhm/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
@@ -982,8 +1001,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/1xwYO9z44wY4rimGEbjbgtbE0NX2KLRGW/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
@@ -995,8 +1013,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/10nkd7uwM5wg6z3_lzG2kXlI7eIwz1h4Z/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
@@ -1008,8 +1025,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Internasional" href="https://drive.google.com/file/d/1beCjjeYesWYVEYvClBLlVdMYqawcvenf/view?usp=sharing" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
@@ -1021,8 +1037,7 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
-                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+<a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
                             data-level="Nasional" href="https://drive.google.com/file/d/1SkYt1bcEFdqgI-1wecU_gDAaJtKZdG6d/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
                             <div class="flex items-center justify-between">
                                 <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
@@ -1034,13 +1049,30 @@
                                 <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
                             </div>
                         </a>
-
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <script>
                     (function () {
                         const btns = document.querySelectorAll('.cert-filter');
-                        const cards = document.querySelectorAll('.cert-card');
+                        const track = document.getElementById('cert-track');
+                        const set = document.getElementById('cert-set');
+
+                        // Gandakan set agar loop mulus (salinan disembunyikan dari pembaca layar)
+                        const clone = set.cloneNode(true);
+                        clone.removeAttribute('id');
+                        clone.setAttribute('aria-hidden', 'true');
+                        clone.querySelectorAll('a').forEach(a => a.setAttribute('tabindex', '-1'));
+                        track.appendChild(clone);
+
+                        const allCards = () => track.querySelectorAll('.cert-card');
+                        const SPEED = 35; // px per detik
+                        const setSpeed = () => {
+                            const h = set.offsetHeight;
+                            if (h) track.style.setProperty('--cert-dur', (h / SPEED) + 's');
+                        };
+
                         btns.forEach(b => b.addEventListener('click', () => {
                             const f = b.dataset.filter;
                             btns.forEach(x => {
@@ -1050,10 +1082,15 @@
                                 x.classList.toggle('bg-surface-container-lowest', !on);
                                 x.classList.toggle('text-on-surface-variant', !on);
                             });
-                            cards.forEach(c => {
+                            allCards().forEach(c => {
                                 c.style.display = (f === 'all' || c.dataset.level === f) ? '' : 'none';
                             });
+                            setSpeed();
                         }));
+
+                        window.addEventListener('load', setSpeed);
+                        window.addEventListener('resize', setSpeed);
+                        setSpeed();
                     })();
                 </script>
             </section>
@@ -1169,7 +1206,7 @@
                 class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-xl border-b border-outline-variant/20">
                 <div class="flex flex-col gap-space-xs"><span
                         class="font-headline-md text-headline-md tracking-tight uppercase text-primary">DADAN
-                        RAMDAN HIDAYAT</span><span
+                        RAMDAN Hidayat</span><span
                         class="font-label-md text-label-md text-on-surface-variant tracking-wider">DATA SCIENTIST •
                         MACHINE LEARNING • SOFTWARE ENGINEER</span></div><a
                     class="inline-flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest"
