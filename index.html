@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="web_standard" name="shell-type">
+    <title>Dadan Ramdan Hidayat — Portfolio</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main>:first-child {
+                margin-top: 0 !important;
+            }
+
+            main>:last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Marquee teks DATA SCIENTIST */
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 22s linear infinite;
+        }
+
+        .marquee-track span {
+            padding-right: 3rem;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .marquee-track { animation: none; }
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-variant": "#e1e2e4", "on-tertiary-fixed-variant": "#003ea8", "secondary-fixed-dim": "#c3c7cc", "surface-container-lowest": "#ffffff", "on-secondary-container": "#61656a", "on-primary": "#ffffff", "tertiary-container": "#00174b", "inverse-primary": "#c7c6c9", "surface-container-high": "#e7e8ea", "on-tertiary": "#ffffff", "tertiary": "#000000", "primary": "#000000", "on-surface": "#191c1e", "surface-bright": "#f8f9fb", "error": "#ba1a1a", "surface-dim": "#d9dadc", "background": "#f8f9fb", "tertiary-fixed": "#dbe1ff", "primary-fixed": "#e3e2e5", "secondary-fixed": "#dfe3e9", "outline": "#76777b", "secondary-container": "#dfe3e9", "on-error": "#ffffff", "inverse-surface": "#2e3132", "surface-container": "#edeef0", "outline-variant": "#c6c6ca", "on-surface-variant": "#45474a", "secondary": "#5b5f64", "surface-container-low": "#f3f3f5", "on-secondary-fixed": "#181c20", "surface": "#f8f9fb", "error-container": "#ffdad6", "on-secondary": "#ffffff", "inverse-on-surface": "#f0f1f3", "on-error-container": "#93000a", "tertiary-fixed-dim": "#b4c5ff", "on-primary-fixed": "#1b1c1e", "primary-fixed-dim": "#c7c6c9", "surface-tint": "#5e5e61", "on-primary-container": "#848386", "on-background": "#191c1e", "on-primary-fixed-variant": "#464749", "on-tertiary-container": "#497cff", "primary-container": "#1b1c1e", "surface-container-highest": "#e1e2e4", "on-secondary-fixed-variant": "#43474c", "on-tertiary-fixed": "#00174b" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-sm": "0.5rem", "gutter-sm": "1rem", "space-md": "1rem", "margin-md": "3rem", "margin": "1.5rem", "space-xs": "0.25rem", "space-lg": "1.75rem", "gutter": "1.5rem", "space-xl": "3rem", "margin-lg": "5rem", "gutter-lg": "2.5rem", "space-2xl": "5rem" }, "fontFamily": { "label-lg": ["JetBrains Mono"], "headline-sm": ["Hanken Grotesk"], "headline-lg-mobile": ["Anton"], "body-sm": ["Hanken Grotesk"], "label-md": ["JetBrains Mono"], "headline-md-mobile": ["Anton"], "body-md": ["Hanken Grotesk"], "label-sm": ["JetBrains Mono"], "body-lg": ["Hanken Grotesk"], "headline-md": ["Anton"], "display-xl": ["Anton"], "headline-lg": ["Anton"], "display-xl-mobile": ["Anton"] }, "fontSize": { "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }], "headline-sm": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["38px", { "lineHeight": "42px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "headline-md-mobile": ["28px", { "lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "label-sm": ["9px", { "lineHeight": "12px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-md": ["40px", { "lineHeight": "44px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-xl": ["96px", { "lineHeight": "96px", "letterSpacing": "0.02em", "fontWeight": "400" }], "headline-lg": ["64px", { "lineHeight": "68px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-xl-mobile": ["52px", { "lineHeight": "54px", "letterSpacing": "0.02em", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body
+    class="bg-surface-container-highest font-body-md text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+    <header class="fixed top-0 inset-x-0 z-50 pointer-events-none flex justify-center py-margin">
+        <div
+            class="pointer-events-auto h-16 w-[calc(100%-3rem)] max-w-[1440px] px-gutter-sm md:px-gutter bg-surface-container-lowest rounded-full shadow-[0_16px_36px_-8px_rgba(8,9,11,0.08),0_4px_12px_-2px_rgba(8,9,11,0.04)] flex items-center justify-between gap-space-md">
+            <div class="flex items-center gap-space-sm">
+                <div
+                    class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-label-md text-label-md font-semibold tracking-normal">
+                    DR</div>
+                <div class="flex flex-col"><span
+                        class="font-label-lg text-label-lg font-bold tracking-wider text-on-surface uppercase">DADAN
+                        RAMDAN HIDAYAT</span><span
+                        class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">DATA • ML •
+                        SYSTEMS</span></div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-space-xs bg-surface-container-low px-space-xs py-space-xs rounded-full"
+                data-active-classes="bg-primary-container text-on-primary font-bold rounded-full"><a aria-current="page"
+                    class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary font-bold rounded-full"
+                    data-path="overview" href="#">About</a><a
+                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="projects" href="#projects">Projects</a><a
+                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="skills" href="#skills">Skills</a><a
+                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="experience" href="#experience">Experience</a><a
+                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="certificates" href="#certificates">Certificates</a><a
+                    class="px-space-md py-space-xs rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"
+                    data-path="contact" href="#contact">Contact</a></nav>
+            <div class="flex items-center gap-space-sm"><a
+                    class="hidden sm:inline-flex items-center justify-center px-space-lg py-space-sm rounded-full font-label-lg text-label-lg uppercase tracking-wider text-primary border border-outline-variant hover:border-primary hover:bg-primary hover:text-on-primary transition-all duration-200"
+                    data-path="contact" href="#contact">LET'S TALK</a>
+                <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span
+                        class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+            </div>
+        </div>
+    </header>
+    <main class="w-full pt-0 bg-surface-container-highest min-h-screen">
+        <div class="flex flex-col w-full">
+
+            <!-- 1. HERO SECTION (tinggi = 1 layar desktop) -->
+            <section
+                class="relative w-full h-screen max-h-[1000px] bg-surface-container-highest overflow-hidden select-none">
+
+                <!-- Garis grid -->
+                <div class="absolute inset-0 pointer-events-none opacity-20">
+                    <div class="w-full h-full max-w-[1440px] mx-auto flex justify-between">
+                        <div class="w-px h-full bg-outline"></div>
+                        <div class="w-px h-full bg-outline hidden md:block"></div>
+                        <div class="w-px h-full bg-outline hidden lg:block"></div>
+                        <div class="w-px h-full bg-outline"></div>
+                    </div>
+                </div>
+
+                <!-- Subtitle kiri atas -->
+                <div class="absolute z-20 top-28 left-margin md:left-margin-md lg:left-margin-lg max-w-xl">
+                    <div
+                        class="flex flex-col gap-space-xs font-headline-sm text-headline-sm text-on-surface tracking-tight">
+                        <span class="font-normal text-on-surface">Data Scientist</span>
+                        <span class="font-normal text-on-surface-variant">Machine Learning &amp; Web Developer</span>
+                    </div>
+                    <div
+                        class="mt-space-sm flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+                        <span class="inline-block w-2 h-2 rounded-full bg-on-tertiary-container animate-ping"></span>
+                        <span>Bekasi, Indonesia • Available for Q2/Q3 Projects</span>
+                    </div>
+                </div>
+
+                <!-- Teks besar berjalan ke samping (di belakang foto) -->
+                <div class="absolute inset-x-0 bottom-[12%] z-0 overflow-hidden pointer-events-none" aria-hidden="true">
+                    <div class="marquee-track font-display-xl text-primary uppercase whitespace-nowrap"
+                        style="font-size: 30vh; line-height: 0.85;">
+                        <span>DATA SCIENTIST •</span>
+                        <span>DATA SCIENTIST •</span>
+                        <span>DATA SCIENTIST •</span>
+                        <span>DATA SCIENTIST •</span>
+                    </div>
+                </div>
+                <h1 class="sr-only">Data Scientist</h1>
+
+                <!-- Foto (di depan teks) -->
+                <img alt="Dadan Ramdan Hidayat — Data Scientist and Machine Learning Engineer" src="foto.png"
+                    class="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 h-[72vh] w-auto object-contain object-bottom drop-shadow-[0_20px_35px_rgba(0,0,0,0.18)] pointer-events-none">
+
+                <!-- Bar bawah -->
+                <div
+                    class="absolute z-20 bottom-0 inset-x-0 px-margin md:px-margin-md lg:px-margin-lg pb-space-md pt-space-sm flex justify-between items-end">
+                    <div
+                        class="font-label-md text-label-md text-on-surface-variant tracking-widest hidden sm:flex items-center gap-space-sm">
+                        <span>EST. 2026</span><span>/</span><span>PORTFOLIO SPECIFICATION 01.4</span>
+                    </div>
+                    <a href="#about"
+                        class="ml-auto inline-flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-widest text-on-surface hover:text-primary transition-all group">
+                        <span>SCROLL TO EXPLORE</span>
+                        <span
+                            class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-y-1">arrow_downward</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 2. ABOUT ME SECTION -->
+            <section class="w-full bg-surface-container py-space-2xl px-margin md:px-margin-md lg:px-margin-lg"
+                id="about">
+                <div class="max-w-[1440px] mx-auto flex flex-col gap-space-2xl">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+                        <div class="flex items-center gap-space-sm">
+                            <span
+                                class="font-label-md text-label-md px-space-xs py-0.5 bg-surface-container-highest rounded-lg text-primary font-bold">01</span>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Profile
+                                • Overview</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md uppercase tracking-tight text-primary">BEYOND THE
+                            DATA</h2>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+                        <div class="lg:col-span-7 flex flex-col gap-space-lg">
+                            <p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+                                Mahasiswa
+                                Sains Data di Institut Teknologi Sains Bandung (ITSB) yang memiliki ketertarikan
+                                mendalam pada ekosistem Data Science, Machine Learning, Artificial Intelligence, dan Web
+                                Development.
+                            </p>
+                            <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                Fokus utama saya bertumpu pada siklus end-to-end data intelligence: pembersihan dan
+                                eksplorasi data komprehensif, pemodelan machine learning matematis, evaluasi performa
+                                ketat, visualisasi interaktif bernilai strategis, hingga pengembangan aplikasi berbasis
+                                web yang stabil dan terukur.
+                            </p>
+                            <div class="grid grid-cols-3 gap-space-md pt-space-lg border-t border-outline-variant/20">
+                                <div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                                    <span
+                                        class="font-headline-md text-headline-md text-primary tracking-tight">100%</span>
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">End-To-End
+                                        ML</span>
+                                </div>
+                                <div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                                    <span
+                                        class="font-headline-md text-headline-md text-primary tracking-tight">05+</span>
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Web
+                                        Systems</span>
+                                </div>
+                                <div class="flex flex-col bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                                    <span
+                                        class="font-headline-md text-headline-md text-primary tracking-tight">ITSB</span>
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mt-1">Data
+                                        Science</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="lg:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+                            <div
+                                class="flex items-center justify-between border-b border-outline-variant/30 pb-space-sm">
+                                <span
+                                    class="font-label-md text-label-md font-bold uppercase tracking-wider text-primary">CORE
+                                    MATRIX</span>
+                                <span
+                                    class="font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-low px-2 py-0.5 rounded-full font-semibold">ACTIVE
+                                    STATUS</span>
+                            </div>
+                            <div class="flex flex-col divide-y divide-outline-variant/20 font-body-sm text-body-sm">
+                                <div class="py-space-sm flex justify-between items-start gap-space-sm">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase">Nama</span>
+                                    <span class="font-semibold text-primary text-right">Dadan Ramdan Hidayat</span>
+                                </div>
+                                <div class="py-space-sm flex justify-between items-start gap-space-sm">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase">Pendidikan</span>
+                                    <span class="text-on-surface text-right">Sains Data, Institut Teknologi Sains
+                                        Bandung (ITSB)</span>
+                                </div>
+                                <div class="py-space-sm flex justify-between items-start gap-space-sm">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase">Konsentrasi</span>
+                                    <span class="text-on-surface text-right">Data Science, Machine Learning, AI &amp;
+                                        Web</span>
+                                </div>
+                                <div class="py-space-sm flex justify-between items-start gap-space-sm">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase">Peran</span>
+                                    <span class="text-on-surface text-right">Mahasiswa, Researcher &amp; Web
+                                        Developer</span>
+                                </div>
+                                <div class="py-space-sm flex justify-between items-start gap-space-sm">
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase">Lokasi</span>
+                                    <span class="text-on-surface text-right">Bekasi, Jawa Barat</span>
+                                </div>
+                            </div>
+                            <div
+                                class="mt-space-xs pt-space-sm border-t border-outline-variant/30 flex justify-between items-center">
+                                <a class="font-label-md text-label-md text-primary font-bold hover:underline inline-flex items-center gap-1"
+                                    href="https://github.com/datascience-dram" rel="noopener noreferrer"
+                                    target="_blank">
+                                    <span>EXPLORE GITHUB REPOS</span>
+                                    <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+                                </a>
+                                <span class="material-symbols-outlined text-outline">terminal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. PROJECTS SECTION -->
+            <section class="w-full bg-surface-container-highest py-space-2xl px-margin md:px-margin-md lg:px-margin-lg"
+                id="projects">
+                <div class="max-w-[1440px] mx-auto flex flex-col gap-space-2xl">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+                        <div class="flex items-center gap-space-sm">
+                            <span
+                                class="font-label-md text-label-md px-space-xs py-0.5 bg-surface-container rounded-lg text-primary font-bold">02</span>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Selected
+                                Works • Deployed Prototypes</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md uppercase tracking-tight text-primary">ENGINEERED
+                            SYSTEMS</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+                        <!-- Project 01 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="flex items-center justify-between border-b border-outline-variant/20 pb-space-sm">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">01
+                                        • MACHINE LEARNING</span>
+                                    <span
+                                        class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary font-bold">HEALTH TECH</span>
+                                </div>
+                                <div class="flex items-start justify-between gap-space-sm">
+                                    <h3
+                                        class="font-headline-md text-headline-md uppercase tracking-tight text-primary group-hover:text-on-tertiary-container transition-colors">
+                                        HeartGuard.AI
+                                    </h3>
+                                    <span class="material-symbols-outlined text-outline text-[28px] shrink-0">vital_signs</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    Sistem Prediksi Penyakit Jantung
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-lg border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm px-2 py-1 bg-surface-container rounded-sm text-on-surface">2026</span>
+                                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                                    href="https://github.com/DadanRamdanHidayat/Project-HeartGuard-AI" rel="noopener noreferrer" target="_blank">
+                                    <span>VIEW REPOSITORY</span>
+                                    <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 02 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="flex items-center justify-between border-b border-outline-variant/20 pb-space-sm">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">02
+                                        • AI SYSTEM</span>
+                                    <span
+                                        class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary font-bold">AGRITECH</span>
+                                </div>
+                                <div class="flex items-start justify-between gap-space-sm">
+                                    <h3
+                                        class="font-headline-md text-headline-md uppercase tracking-tight text-primary group-hover:text-on-tertiary-container transition-colors">
+                                        SmartApple.AI
+                                    </h3>
+                                    <span class="material-symbols-outlined text-outline text-[28px] shrink-0">nutrition</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    Sistem Prediksi Penyakit Apel
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-lg border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm px-2 py-1 bg-surface-container rounded-sm text-on-surface">2026</span>
+                                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                                    href="https://smart-apple-murex.vercel.app/" rel="noopener noreferrer" target="_blank">
+                                    <span>OPEN LIVE APP</span>
+                                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 03 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="flex items-center justify-between border-b border-outline-variant/20 pb-space-sm">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">03
+                                        • DATA ANALYTICS</span>
+                                    <span
+                                        class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary font-bold">HR</span>
+                                </div>
+                                <div class="flex items-start justify-between gap-space-sm">
+                                    <h3
+                                        class="font-headline-md text-headline-md uppercase tracking-tight text-primary group-hover:text-on-tertiary-container transition-colors">
+                                        CareerPath
+                                    </h3>
+                                    <span class="material-symbols-outlined text-outline text-[28px] shrink-0">trending_up</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    Sistem Proyeksi Karyawan
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-lg border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm px-2 py-1 bg-surface-container rounded-sm text-on-surface">2026</span>
+                                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                                    href="https://careerpath.great-site.net" rel="noopener noreferrer" target="_blank">
+                                    <span>OPEN LIVE APP</span>
+                                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 04 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="flex items-center justify-between border-b border-outline-variant/20 pb-space-sm">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">04
+                                        • WEB PLATFORM</span>
+                                    <span
+                                        class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary font-bold">UMKM</span>
+                                </div>
+                                <div class="flex items-start justify-between gap-space-sm">
+                                    <h3
+                                        class="font-headline-md text-headline-md uppercase tracking-tight text-primary group-hover:text-on-tertiary-container transition-colors">
+                                        Katalog UMKM Gerai Living World
+                                    </h3>
+                                    <span class="material-symbols-outlined text-outline text-[28px] shrink-0">storefront</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    Katalog UMKM Gerai Living World
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-lg border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm px-2 py-1 bg-surface-container rounded-sm text-on-surface">2026</span>
+                                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                                    href="https://katalog-umkm-livingworld.site.je" rel="noopener noreferrer" target="_blank">
+                                    <span>VISIT SITE</span>
+                                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 05 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="flex items-center justify-between border-b border-outline-variant/20 pb-space-sm">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">05
+                                        • COMPANY PROFILE</span>
+                                    <span
+                                        class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary font-bold">GOVERNMENT</span>
+                                </div>
+                                <div class="flex items-start justify-between gap-space-sm">
+                                    <h3
+                                        class="font-headline-md text-headline-md uppercase tracking-tight text-primary group-hover:text-on-tertiary-container transition-colors">
+                                        Profile Dinas Koperasi &amp; UKM
+                                    </h3>
+                                    <span class="material-symbols-outlined text-outline text-[28px] shrink-0">account_balance</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    Company Profile Dinas Koperasi &amp; UKM
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-lg border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm px-2 py-1 bg-surface-container rounded-sm text-on-surface">2026</span>
+                                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                                    href="https://dinas-koperasi.site.je/" rel="noopener noreferrer" target="_blank">
+                                    <span>VISIT SITE</span>
+                                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 06 -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="flex items-center justify-between border-b border-outline-variant/20 pb-space-sm">
+                                    <span
+                                        class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold">06
+                                        • PROFILE &amp; CATALOG</span>
+                                    <span
+                                        class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-primary font-bold">BUSINESS</span>
+                                </div>
+                                <div class="flex items-start justify-between gap-space-sm">
+                                    <h3
+                                        class="font-headline-md text-headline-md uppercase tracking-tight text-primary group-hover:text-on-tertiary-container transition-colors">
+                                        Profile dan Katalog Etiesta
+                                    </h3>
+                                    <span class="material-symbols-outlined text-outline text-[28px] shrink-0">inventory_2</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                    Profile dan Katalog Etiesta
+                                </p>
+                            </div>
+                            <div
+                                class="pt-space-md mt-space-lg border-t border-outline-variant/20 flex flex-wrap items-center justify-between gap-space-xs">
+                                <span
+                                    class="font-label-sm text-label-sm px-2 py-1 bg-surface-container rounded-sm text-on-surface">2026</span>
+                                <a class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform"
+                                    href="https://lemarietiesta.com" rel="noopener noreferrer" target="_blank">
+                                    <span>VISIT SITE</span>
+                                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. SKILLS SECTION -->
+            <section class="w-full bg-surface-container py-space-2xl px-margin md:px-margin-md lg:px-margin-lg"
+                id="skills">
+                <div class="max-w-[1440px] mx-auto flex flex-col gap-space-2xl">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+                        <div class="flex items-center gap-space-sm">
+                            <span
+                                class="font-label-md text-label-md px-space-xs py-0.5 bg-surface-container-highest rounded-lg text-primary font-bold">03</span>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Core
+                                Competencies</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md uppercase tracking-tight text-primary">TOOLS &amp;
+                            EXPERTISE</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+                        <!-- Data Science -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[26px]">insights</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary uppercase">DATA SCIENCE
+                                    </h3>
+                                    <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">ANALYTICS •
+                                        STATISTICS • EDA</p>
+                                </div>
+                                <ul
+                                    class="flex flex-col gap-space-sm pt-space-md border-t border-outline-variant/20 font-body-sm text-body-sm text-on-surface">
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Data Cleaning
+                                            &amp; Preprocessing</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Exploratory Data
+                                            Analysis (EDA)</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Statistical
+                                            Modeling &amp; Testing</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Data Storytelling
+                                            &amp; Visualization</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Feature
+                                            Engineering &amp; Selection</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Regression &amp;
+                                            Classification Metrics</span></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm border-t border-outline-variant/20 font-label-sm text-label-sm text-on-surface-variant">
+                                FRAMEWORKS: PANDAS, NUMPY, SEABORN, MATPLOTLIB, R
+                            </div>
+                        </div>
+                        <!-- ML & AI -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[26px]">memory</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary uppercase">ML &amp; AI
+                                    </h3>
+                                    <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">NEURAL NETWORKS
+                                        • INFERENCE</p>
+                                </div>
+                                <ul
+                                    class="flex flex-col gap-space-sm pt-space-md border-t border-outline-variant/20 font-body-sm text-body-sm text-on-surface">
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Python ML
+                                            Ecosystem</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>TensorFlow &amp;
+                                            Keras Modeling</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Scikit-learn
+                                            Algorithms</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Deep Learning
+                                            &amp; Computer Vision</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Model Evaluation
+                                            &amp; Hyperparameter Tuning</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Inference
+                                            Deployment &amp; Pipelines</span></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm border-t border-outline-variant/20 font-label-sm text-label-sm text-on-surface-variant">
+                                SYSTEMS: KERAS, SCIKIT-LEARN, OPENCV, STREAMLIT
+                            </div>
+                        </div>
+                        <!-- Web Development -->
+                        <div
+                            class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+                            <div class="flex flex-col gap-space-md">
+                                <div
+                                    class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+                                    <span class="material-symbols-outlined text-[26px]">code</span>
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-sm text-headline-sm text-primary uppercase">WEB DEVELOPMENT
+                                    </h3>
+                                    <p class="font-label-sm text-label-sm text-on-surface-variant mt-1">FULLSTACK
+                                        ARCHITECTURE</p>
+                                </div>
+                                <ul
+                                    class="flex flex-col gap-space-sm pt-space-md border-t border-outline-variant/20 font-body-sm text-body-sm text-on-surface">
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>PHP &amp; MySQL
+                                            Database Engineering</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Flask Web
+                                            Application Framework</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Responsive Modern
+                                            HTML5 &amp; CSS3</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Vanilla JavaScript
+                                            &amp; DOM Manipulation</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>CRUD Application
+                                            Systems</span></li>
+                                    <li class="flex items-center gap-space-xs"><span
+                                            class="w-1.5 h-1.5 rounded-full bg-primary"></span><span>Git Version
+                                            Control &amp; GitHub Actions</span></li>
+                                </ul>
+                            </div>
+                            <div
+                                class="mt-space-lg pt-space-sm border-t border-outline-variant/20 font-label-sm text-label-sm text-on-surface-variant">
+                                TOOLING: VS CODE, POSTMAN, RAILWAY, GITHUB PAGES
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. EXPERIENCE SECTION -->
+            <section class="w-full bg-surface-container-highest py-space-2xl px-margin md:px-margin-md lg:px-margin-lg"
+                id="experience">
+                <div class="max-w-[1440px] mx-auto flex flex-col gap-space-2xl">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+                        <div class="flex items-center gap-space-sm">
+                            <span
+                                class="font-label-md text-label-md px-space-xs py-0.5 bg-surface-container rounded-lg text-primary font-bold">04</span>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Professional
+                                Trajectory</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md uppercase tracking-tight text-primary">EXPERIENCE
+                            &amp; JOURNEY</h2>
+                    </div>
+                    <div class="flex flex-col divide-y divide-outline-variant/30">
+                        <div class="py-space-xl flex flex-col lg:flex-row justify-between items-start gap-space-lg">
+                            <div class="w-full lg:w-1/3 flex flex-col gap-space-xs">
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">2026
+                                    • INTERNSHIP</span>
+                                <h3 class="font-headline-sm text-headline-sm text-primary uppercase">Dinas Koperasi dan
+                                    UKM</h3>
+                                <span
+                                    class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Pemerintah
+                                    Kabupaten Bekasi</span>
+                            </div>
+                            <div class="w-full lg:w-2/3 flex flex-col gap-space-sm">
+                                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    Bertanggung jawab dalam pengembangan sistem <span
+                                        class="font-semibold text-primary">Web Katalog UMKM</span> terpusat.
+                                    Mengimplementasikan arsitektur database MySQL, alur CRUD data berbasis PHP, dan
+                                    pembersihan dataset profil pelaku usaha untuk memastikan katalog data instansi dapat
+                                    diakses secara real-time dan akurat.
+                                </p>
+                                <div class="flex flex-wrap gap-space-xs pt-space-xs">
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Data
+                                        Processing</span>
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">PHP
+                                        / MySQL</span>
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Public
+                                        Sector IT</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-space-xl flex flex-col lg:flex-row justify-between items-start gap-space-lg">
+                            <div class="w-full lg:w-1/3 flex flex-col gap-space-xs">
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">2026
+                                    • PROJECT INTERNSHIP</span>
+                                <h3 class="font-headline-sm text-headline-sm text-primary uppercase">Soko Finansial</h3>
+                                <span
+                                    class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Event
+                                    Project Intern</span>
+                            </div>
+                            <div class="w-full lg:w-2/3 flex flex-col gap-space-sm">
+                                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    Melakukan validasi, pembersihan data peserta, dan verifikasi analitik aktivitas
+                                    kegiatan. Menggunakan instrumen R / RStudio serta spreadsheet komputasional untuk
+                                    memastikan integritas data metrik pelaksanaan proyek berjalan presisi.
+                                </p>
+                                <div class="flex flex-wrap gap-space-xs pt-space-xs">
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Data
+                                        Validation</span>
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">R
+                                        / RStudio</span>
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Quantitative
+                                        Reporting</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-space-xl flex flex-col lg:flex-row justify-between items-start gap-space-lg">
+                            <div class="w-full lg:w-1/3 flex flex-col gap-space-xs">
+                                <span
+                                    class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">2024
+                                    – 2025 • LEADERSHIP</span>
+                                <h3 class="font-headline-sm text-headline-sm text-primary uppercase">Himpunan Mahasiswa
+                                    Sains Data</h3>
+                                <span
+                                    class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Institut
+                                    Teknologi Sains Bandung (ITSB)</span>
+                            </div>
+                            <div class="w-full lg:w-2/3 flex flex-col gap-space-sm">
+                                <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+                                    Menjabat sebagai <span class="font-semibold text-primary">Wakil Ketua
+                                        Himpunan</span>. Memimpin koordinasi strategis program kerja akademik data
+                                    science, workshop kecerdasan buatan, kolaborasi tim riset mahasiswa, serta menjadi
+                                    penghubung antara pihak fakultas dan anggota organisasi.
+                                </p>
+                                <div class="flex flex-wrap gap-space-xs pt-space-xs">
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Vice
+                                        President</span>
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Academic
+                                        Initiatives</span>
+                                    <span
+                                        class="font-label-sm text-label-sm px-2 py-0.5 bg-surface-container rounded-sm text-on-surface">Team
+                                        Governance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. CERTIFICATES SECTION -->
+            <section class="w-full bg-surface-container py-space-2xl px-margin md:px-margin-md lg:px-margin-lg"
+                id="certificates">
+                <div class="max-w-[1440px] mx-auto flex flex-col gap-space-xl">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-md border-b border-outline-variant/30 pb-space-md">
+                        <div class="flex items-center gap-space-sm">
+                            <span
+                                class="font-label-md text-label-md px-space-xs py-0.5 bg-surface-container-highest rounded-lg text-primary font-bold">05</span>
+                            <span
+                                class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Credentials
+                                • 19 Certificates</span>
+                        </div>
+                        <h2 class="font-headline-md text-headline-md uppercase tracking-tight text-primary">CERTIFICATIONS</h2>
+                    </div>
+                    <div class="flex flex-wrap gap-space-sm" id="cert-filters">
+                        <button data-filter="all" class="cert-filter px-space-md py-space-xs rounded-full font-label-lg text-label-lg bg-primary text-on-primary transition-colors">All (19)</button>
+                        <button data-filter="Nasional" class="cert-filter px-space-md py-space-xs rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors">Nasional (12)</button>
+                        <button data-filter="Internasional" class="cert-filter px-space-md py-space-xs rounded-full font-label-lg text-label-lg bg-surface-container-lowest text-on-surface-variant hover:text-on-surface transition-colors">Internasional (7)</button>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md" id="cert-grid">
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1Pqu6exOa9a-8ueoo3J-stfGesvrr2wQ_?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Web Developer Assistant</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">BNSP</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Memulai Dasar Pemrograman untuk Menjadi Pengembang Software</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Pengenalan Ke Logika Pemrograman</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Dasar Git dengan Github</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Dasar Data Science</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Dasar Visualisasi Data</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Memulai Pemrograman dengan Python</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Machine Learning untuk Pemula</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Fundamental Analisis Data</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Fundamental Pemrosesan Data</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/drive/folders/1rcJ63zHl6F3hgzv-MfHz1idsS7St_BW7?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Belajar Matematika untuk Data Science</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DBS Foundation Dicoding</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/19qz7joDiB8JZHZbV0aV5rpYkdsuI-Ebt/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Intro Machine Learning</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Kaggle</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/16nozDf9kyvoTE4uMPT1n1l8o6q31rMFg/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Intro to SQL</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Kaggle</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/1slPIkA4lsOtRRS-QV8u69LmF4wI_MMMJ/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Pandas</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Kaggle</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/1RjXsf5T9UA8UsZ6auKS-v31qKICFGEhm/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2026</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Python</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Kaggle</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/1xwYO9z44wY4rimGEbjbgtbE0NX2KLRGW/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Data Analysis with Excel</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DQLab</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/10nkd7uwM5wg6z3_lzG2kXlI7eIwz1h4Z/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Data Science with R</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">DQLab</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Internasional" href="https://drive.google.com/file/d/1beCjjeYesWYVEYvClBLlVdMYqawcvenf/view?usp=sharing" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
+                                <span class="font-label-sm text-label-sm bg-on-tertiary-container text-on-primary px-2 py-0.5 rounded-full font-bold uppercase">Internasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Data Classification and Summarization Using IBM Granite</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">IBM</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                        <a class="cert-card bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between gap-space-md group"
+                            data-level="Nasional" href="https://drive.google.com/file/d/1SkYt1bcEFdqgI-1wecU_gDAaJtKZdG6d/view?usp=drive_link" rel="noopener noreferrer" target="_blank">
+                            <div class="flex items-center justify-between">
+                                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">2025</span>
+                                <span class="font-label-sm text-label-sm bg-surface-container text-primary px-2 py-0.5 rounded-full font-bold uppercase">Nasional</span>
+                            </div>
+                            <h3 class="font-headline-sm text-headline-sm text-primary group-hover:text-on-tertiary-container transition-colors">Intro to Software Engineering</h3>
+                            <div class="flex items-center justify-between pt-space-sm border-t border-outline-variant/20">
+                                <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">RevoU</span>
+                                <span class="material-symbols-outlined text-[18px] text-primary group-hover:translate-x-1 transition-transform">arrow_outward</span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <script>
+                    (function () {
+                        const btns = document.querySelectorAll('.cert-filter');
+                        const cards = document.querySelectorAll('.cert-card');
+                        btns.forEach(b => b.addEventListener('click', () => {
+                            const f = b.dataset.filter;
+                            btns.forEach(x => {
+                                const on = x === b;
+                                x.classList.toggle('bg-primary', on);
+                                x.classList.toggle('text-on-primary', on);
+                                x.classList.toggle('bg-surface-container-lowest', !on);
+                                x.classList.toggle('text-on-surface-variant', !on);
+                            });
+                            cards.forEach(c => {
+                                c.style.display = (f === 'all' || c.dataset.level === f) ? '' : 'none';
+                            });
+                        }));
+                    })();
+                </script>
+            </section>
+
+            <!-- 7. CONTACT SECTION -->
+            <section
+                class="w-full bg-primary text-on-primary py-space-2xl px-margin md:px-margin-md lg:px-margin-lg relative overflow-hidden"
+                id="contact">
+                <div
+                    class="absolute -right-20 -bottom-20 w-96 h-96 rounded-full border border-outline-variant/10 pointer-events-none">
+                </div>
+                <div class="max-w-[1440px] mx-auto flex flex-col gap-space-2xl relative z-10">
+                    <div class="flex flex-col gap-space-sm max-w-4xl">
+                        <span class="font-label-md text-label-md uppercase tracking-widest text-secondary-fixed">GET IN
+                            TOUCH • COLLABORATION</span>
+                        <h2 class="font-headline-lg text-headline-lg uppercase tracking-tighter text-on-primary">
+                            LET'S BUILD SOMETHING MEANINGFUL.
+                        </h2>
+                        <p class="font-body-lg text-body-lg text-outline-variant max-w-2xl mt-space-xs">
+                            Open to opportunities, research collaborations, machine learning deployment projects, and
+                            engineering roles.
+                        </p>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl pt-space-lg border-t border-outline/30 items-start">
+                        <div class="lg:col-span-5 flex flex-col gap-space-md">
+                            <span
+                                class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">DIRECT
+                                INQUIRY</span>
+                            <a class="inline-flex items-center justify-between p-space-md bg-surface-container-lowest text-primary rounded-xl hover:bg-surface-container-high transition-all group font-headline-sm text-headline-sm tracking-tight"
+                                href="mailto:hidayatramdan808@gmail.com">
+                                <span>hidayatramdan808@gmail.com</span>
+                                <span
+                                    class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            </a>
+                            <span class="font-label-sm text-label-sm text-outline-variant">Response window: typically
+                                within 24 business hours.</span>
+                        </div>
+                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                            <a class="p-space-md rounded-xl bg-surface-container-highest/10 hover:bg-surface-container-highest/20 border border-outline-variant/10 transition-all flex flex-col justify-between h-32 group"
+                                href="https://www.linkedin.com/in/dadan-ramdan-hidayat-381789316/"
+                                rel="noopener noreferrer" target="_blank">
+                                <div class="flex justify-between items-center text-outline-variant">
+                                    <span
+                                        class="font-label-sm text-label-sm uppercase tracking-wider">Professional</span>
+                                    <span
+                                        class="material-symbols-outlined text-[18px] group-hover:text-on-primary transition-colors">open_in_new</span>
+                                </div>
+                                <span
+                                    class="font-headline-sm text-headline-sm uppercase text-on-primary tracking-tight">LinkedIn</span>
+                            </a>
+                            <a class="p-space-md rounded-xl bg-surface-container-highest/10 hover:bg-surface-container-highest/20 border border-outline-variant/10 transition-all flex flex-col justify-between h-32 group"
+                                href="https://github.com/datascience-dram" rel="noopener noreferrer" target="_blank">
+                                <div class="flex justify-between items-center text-outline-variant">
+                                    <span class="font-label-sm text-label-sm uppercase tracking-wider">Code
+                                        Repository</span>
+                                    <span
+                                        class="material-symbols-outlined text-[18px] group-hover:text-on-primary transition-colors">open_in_new</span>
+                                </div>
+                                <span
+                                    class="font-headline-sm text-headline-sm uppercase text-on-primary tracking-tight">GitHub</span>
+                            </a>
+                            <a class="p-space-md rounded-xl bg-surface-container-highest/10 hover:bg-surface-container-highest/20 border border-outline-variant/10 transition-all flex flex-col justify-between h-32 group"
+                                href="https://dadanramdanhidayat.github.io/DadanRamdanHidayat/"
+                                rel="noopener noreferrer" target="_blank">
+                                <div class="flex justify-between items-center text-outline-variant">
+                                    <span class="font-label-sm text-label-sm uppercase tracking-wider">Showcase
+                                        Archive</span>
+                                    <span
+                                        class="material-symbols-outlined text-[18px] group-hover:text-on-primary transition-colors">open_in_new</span>
+                                </div>
+                                <span
+                                    class="font-headline-sm text-headline-sm uppercase text-on-primary tracking-tight">Portfolio
+                                    Works</span>
+                            </a>
+                            <a class="p-space-md rounded-xl bg-surface-container-highest/10 hover:bg-surface-container-highest/20 border border-outline-variant/10 transition-all flex flex-col justify-between h-32 group"
+                                href="https://rpubs.com/Ramdan" rel="noopener noreferrer" target="_blank">
+                                <div class="flex justify-between items-center text-outline-variant">
+                                    <span class="font-label-sm text-label-sm uppercase tracking-wider">Statistical
+                                        Papers</span>
+                                    <span
+                                        class="material-symbols-outlined text-[18px] group-hover:text-on-primary transition-colors">open_in_new</span>
+                                </div>
+                                <span
+                                    class="font-headline-sm text-headline-sm uppercase text-on-primary tracking-tight">RPubs
+                                    Articles</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                (function () {
+                    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            const targetId = this.getAttribute('href');
+                            if (targetId === '#' || targetId === '') return;
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                e.preventDefault();
+                                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        });
+                    });
+                })();
+            </script>
+        </div>
+    </main>
+    <footer class="w-full bg-surface-container-lowest py-space-2xl border-t border-outline-variant/30">
+        <div class="max-w-[1440px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+            <div
+                class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-xl border-b border-outline-variant/20">
+                <div class="flex flex-col gap-space-xs"><span
+                        class="font-headline-md text-headline-md tracking-tight uppercase text-primary">DADAN
+                        RAMDAN HIDAYAT</span><span
+                        class="font-label-md text-label-md text-on-surface-variant tracking-wider">DATA SCIENTIST •
+                        MACHINE LEARNING • SOFTWARE ENGINEER</span></div><a
+                    class="inline-flex items-center gap-space-xs font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase tracking-widest"
+                    href="#"><span>BACK TO TOP</span><span
+                        class="material-symbols-outlined text-[16px]">north</span></a>
+            </div>
+            <div
+                class="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-space-lg gap-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">
+                <span>© 2026 DADAN RAMDAN HIDAYAT. ALL RIGHTS RESERVED.</span><span
+                    class="text-secondary">DESIGNED &amp; BUILT WITH PURPOSE</span></div>
+        </div>
+    </footer>
+</body>
+
+</html>
